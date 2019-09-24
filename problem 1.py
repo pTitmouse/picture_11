@@ -1,3 +1,5 @@
+# picture_11
+#картинка нa python
 from graph import *
 windowSize(600, 1200)
 #небо
@@ -53,20 +55,73 @@ rectangle(310 ,50 ,400, 460)
 
 
 #овальчики
+penColor(100,100,10)
+penSize(2)
+brushColor(100,100,0)
+
+c=canvas()
+c.create_oval(150,5,590,100)
+c.create_oval(5,40,300,130)
+c.create_oval(100,150,590,250)
+c.create_oval(5,300,200,360)
+c.create_oval(10,420,130,470)
+c.create_oval(10,480,130,530)
+c.create_oval(-30,450,600,650)
 
 #машинка
-#крыша 
+##крыша 
 penColor(100,0,100)
 penSize(2)
 brushColor(100,0,100)
 
-rectangle(250 ,400 ,400, 450)
-#корпус
+l=rectangle(250 ,450 ,400, 500)
+
+##корпус
 penColor(100,0,100)
 penSize(2)
-brushColor(100,0,100)
+brushColor(100 ,0 ,100)
 
-rectangle(200 ,450 ,450, 520)
+h=rectangle(200 ,500 ,450 ,550)
+## окошки
+penColor(0,0,10)
+penSize(2)
+brushColor(0,0,10)
 
+p=rectangle(260 ,460 ,315, 500)
+
+penColor(0,0,10)
+penSize(2)
+brushColor(0,0,10)
+
+f=rectangle(335 ,460 ,390, 500)
+##колёса
+penColor(0,0,10)
+penSize(2)
+brushColor(0,0,10)
+
+d=circle(250 , 540 , 20)
+a=circle(400,540,20)
+
+#animation
+def update():
+  moveObjectBy(d, 5, 0)
+  moveObjectBy(a, 5, 0)
+  moveObjectBy(f, 5, 0)
+  moveObjectBy(p, 5, 0)
+  moveObjectBy(h, 5, 0)
+  moveObjectBy(l, 5, 0)
+  
+def keyPressed(event):
+  if event.keycode == VK_ESCAPE:
+    close()
+
+
+
+
+onKey(keyPressed)
+onTimer(update, 50)
+
+
+  
 
 run()

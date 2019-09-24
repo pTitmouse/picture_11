@@ -101,7 +101,6 @@ brushColor(0,0,10)
 circle(250 , 540 , 20)
 circle(400,540,20)
 
-#animation
 
 
 
