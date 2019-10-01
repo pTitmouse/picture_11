@@ -22,37 +22,31 @@ rectangle(3,400 ,500, 900)
 penColor(0,100,200)
 penSize(2)
 brushColor(0,100,200)
-
-rectangle(10,10 ,100, 400)
+A=rectangle(a+10,10 ,a+100, 400)
 
 #левый верхний 2
 penColor(0,150,200)
 penSize(2)
 brushColor(0,150,200)
-
-rectangle(120,20 ,210, 410)
+B=rectangle(a+120,20 ,a+210, 410)
 
 #левый нижний
 penColor(0,150,100)
 penSize(2)
 brushColor(0,150,100)
-
-rectangle(90,90 ,180, 460)
+C=rectangle(a+90,90 ,a+180, 460)
 
 #правый верхний
 penColor(0,100,100)
 penSize(2)
 brushColor(0,100,100)
-
-rectangle(400,10 ,490, 410)
+D=rectangle(a+400,10 ,a+490, 410)
 
 #правый нижний
 penColor(0,200,100)
 penSize(2)
 brushColor(0,200,100)
-
-rectangle(310 ,50 ,400, 460)
-
+E=rectangle(a+310 ,50 ,a+400, 460)
 
 #овальчики
 penColor(100,100,10)
@@ -110,6 +104,11 @@ def update():
   moveObjectBy(p, 5, 0)
   moveObjectBy(h, 5, 0)
   moveObjectBy(l, 5, 0)
+  moveObjectBy(A, -5, 0)
+  moveObjectBy(B, -5, 0)
+  moveObjectBy(C, -5, 0)
+  moveObjectBy(D, -5, 0)
+  moveObjectBy(E, -5, 0)
   
 def keyPressed(event):
   if event.keycode == VK_ESCAPE:
